@@ -1,0 +1,6 @@
+{
+  "name": "KaamConnect",
+  "description": "Local Job & Skill Matching Portal for Daily-Wage Workers connecting skilled workers with nearby employers.",
+  "requestFramePermissions": ["geolocation", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

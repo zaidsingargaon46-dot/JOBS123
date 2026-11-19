@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans Kannada', 'Noto Sans Devanagari', sans-serif;
+    --font-sans: 'Public Sans', 'Noto Sans Kannada', 'Noto Sans Devanagari', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: #263238;
+    background-color: #F7F9F7;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  html.large-text {
+    font-size: 18px;
+  }
+
+  html.high-contrast {
+    --kc-border: #123B65;
+  }
+}
+
+/* Custom Leaflet marker & popup refinements */
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 10;
+}
+
+.kc-map-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2.5px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(18, 59, 101, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
